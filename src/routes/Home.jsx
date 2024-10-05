@@ -1,25 +1,16 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import First from '../components/First'
-import Featured from '../components/Featured'
-import Gallery from '../components/Gallery'
-import Footer from '../components/Footer'
-import Verse from '../components/Verse'
-import More from '../components/More'
-import Albums from '../components/Albums'
+import React from "react";
+import First from "../components/First";
+import Gallery from "../components/Gallery";
+import Verse from "../components/Verse";
 
 function Home() {
   return (
     <>
-        <Navbar/>
-        <First/>
-        <Featured/>
-        <Gallery/>
-        <Verse/>
-        <More/>
-        <Footer/>
+      <First />
+      <Gallery />
+      <Verse />
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;
