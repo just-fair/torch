@@ -15,7 +15,7 @@ function Donate() {
           animate="show"
         >
           <div>
-            <h1>Donate</h1>
+            <h1>Give</h1>
           </div>
           <div>
             <p>

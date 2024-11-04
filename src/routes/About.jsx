@@ -1,21 +1,8 @@
 import React from "react";
-import ATEANGEL from "../assets/imgs/leaders/ATEANGEL1.jpg";
-import ATEPHOEBE from "../assets/imgs/leaders/ATEPHOEBE.jpeg";
-import COLLEEN from "../assets/imgs/leaders/COLLEEN.jpg";
-import JELOY2 from "../assets/imgs/leaders/JELOY2.jpg";
-import KUYAJHERALD from "../assets/imgs/leaders/KUYAJHERALD.jpg";
-import KUYAPAUL from "../assets/imgs/leaders/KUYAPAUL.jpg";
-import KUYATIAN from "../assets/imgs/leaders/KUYATIAN1.jpg";
-import LEE from "../assets/imgs/leaders/LEE2.jpg";
-import LOU from "../assets/imgs/leaders/LOU1.jpeg";
-import MISA from "../assets/imgs/leaders/MISA1.jpg";
-import PVEN from "../assets/imgs/leaders/PVEN1.jpeg";
-import TINA from "../assets/imgs/leaders/TINA2.jpeg";
-import TITALHEK from "../assets/imgs/leaders/TITALHEK1.jpeg";
-import TITASWEET from "../assets/imgs/leaders/TITASWEET2.jpg";
-import TITOLITO from "../assets/imgs/leaders/TITOLITO2.jpg";
+
 import { motion } from "framer-motion";
 import { fadeIn } from "../animation/animations";
+import CardSlider from "../components/CardSlider";
 
 function About() {
   return (
@@ -46,7 +33,7 @@ function About() {
             viewport={{ once: true, amount: 0.5 }}
           >
             <h3>
-              Transformation Only Thru Redemption by Christ Jesus our Hope.
+              Transformation Obtain Thru Redemption by Christ Jesus our Hope.
             </h3>
 
             <p>
@@ -127,7 +114,7 @@ function About() {
 
         <motion.div
           className="leader-title"
-          variants={fadeIn("up", 0.25)}
+          variants={fadeIn("up", 0.01)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true }}
@@ -135,132 +122,7 @@ function About() {
           <h2>Leadership Members</h2>
         </motion.div>
 
-        <div id="card-area">
-          <div className="wrapper">
-            <div className="box-area lead-pastor">
-              <div className="box">
-                <img src={PVEN} alt="" />
-                <div className="overlay">
-                  <h3>John Oliven Rances</h3>
-                  <p>Lead Pastor</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="box-area assc-pastor">
-              <div className="box">
-                <img src={TINA} alt="" />
-                <div className="overlay">
-                  <h3>Kristina Cassandra Ardiente</h3>
-                  <p>Associate Pastor</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="box-area pastoral-trainee">
-              <div className="box">
-                <img src={LOU} alt="" />
-                <div className="overlay">
-                  <h3>Louie Castro Calma</h3>
-                  <p>Pastoral Trainee</p>
-                </div>
-              </div>
-              <div className="box">
-                <img src={LEE} alt="" />
-                <div className="overlay">
-                  <h3>Hayle Greselle L. Base</h3>
-                  <p>Pastoral Trainee</p>
-                </div>
-              </div>
-              <div className="box">
-                <img src={MISA} alt="" />
-                <div className="overlay">
-                  <h3>Roshell Dian F. Subillaga</h3>
-                  <p>Pastoral Trainee</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="box-area elder">
-              <div className="box">
-                <img src={KUYAPAUL} alt="" />
-                <div className="overlay">
-                  <h3>Christian Paul Salvador</h3>
-                  <p>Elder</p>
-                </div>
-              </div>
-              <div className="box">
-                <img src={ATEPHOEBE} alt="" />
-                <div className="overlay">
-                  <h3>Phoebe Kates Salvador</h3>
-                  <p>Elder</p>
-                </div>
-              </div>
-              <div className="box">
-                <img src={TITALHEK} alt="" />
-                <div className="overlay">
-                  <h3>Rosemarie Beltran</h3>
-                  <p>Elder</p>
-                </div>
-              </div>
-              {/* </div>
-
-            <div className="box-area elder"> */}
-              <div className="box">
-                <img src={TITASWEET} alt="" />
-                <div className="overlay">
-                  <h3>Sweetheart B. Maga</h3>
-                  <p>Elder</p>
-                </div>
-              </div>
-              <div className="box">
-                <img src={TITOLITO} alt="" />
-                <div className="overlay">
-                  <h3>Angelito Maga</h3>
-                  <p>Elder</p>
-                </div>
-              </div>
-              <div className="box">
-                <img src={KUYATIAN} alt="" />
-                <div className="overlay">
-                  <h3>William Tristian Beltran</h3>
-                  <p>Elder</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="box-area leader">
-              <div className="box">
-                <img src={COLLEEN} alt="" />
-                <div className="overlay">
-                  <h3>Colleen Millicent C. Gane</h3>
-                  <p>Leader</p>
-                </div>
-              </div>
-              <div className="box">
-                <img src={JELOY2} alt="" />
-                <div className="overlay">
-                  <h3>Heart Angelo Maga</h3>
-                  <p>Leader</p>
-                </div>
-              </div>
-              <div className="box">
-                <img src={KUYAJHERALD} alt="" />
-                <div className="overlay">
-                  <h3>Mark Jherald B. Abila</h3>
-                  <p>Leader</p>
-                </div>
-              </div>
-              <div className="box">
-                <img src={ATEANGEL} alt="" />
-                <div className="overlay">
-                  <h3>Maria Angela Victoria E. Beltran</h3>
-                  <p>Leader</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <CardSlider />
       </section>
     </>
   );

@@ -1,0 +1,62 @@
+#card-area {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .wrapper {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px; /* Space between cards */
+    will-change: transform;
+  }
+  
+  .box {
+    min-width: 400px; 
+    max-width: 400px;
+    flex-shrink: 0; /* Prevents cards from shrinking */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    /* background: #fff; */
+    background: #000;
+    text-align: center;
+    padding: 10px;
+    /* display: block; */
+  }
+  
+  .box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  h3, p {
+    margin: 5px 0;
+    /* font-size: 16px; */
+    /* color: #333; */
+  }
+
+
+  
+  .slide-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+    z-index: 100;
+  }
+  
+  .slide-button:first-of-type {
+    left: 10px;
+  }
+  
+  .slide-button:last-of-type {
+    right: 10px;
+  }
+  

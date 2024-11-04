@@ -55,20 +55,7 @@ const Navbar = () => {
 
           <li onClick={() => window.scrollTo(0, 0)}>
             <Link to="/" className={pathname === "/" ? active : ""}>
-              Home
-            </Link>
-          </li>
-          <li onClick={() => window.scrollTo(0, 0)}>
-            <Link to="about" className={pathname === "/about" ? active : ""}>
-              About Us
-            </Link>
-          </li>
-          <li onClick={() => window.scrollTo(0, 0)}>
-            <Link
-              to="partners"
-              className={pathname === "/partners" ? active : ""}
-            >
-              Partners
+              HOME
             </Link>
           </li>
           <li onClick={() => window.scrollTo(0, 0)}>
@@ -76,9 +63,22 @@ const Navbar = () => {
               to="donation"
               className={pathname === "/donation" ? active : ""}
             >
-              Donation
+              GIVE
             </Link>
           </li>
+          <li onClick={() => window.scrollTo(0, 0)}>
+            <Link to="about" className={pathname === "/about" ? active : ""}>
+              ABOUT US
+            </Link>
+          </li>
+          {/* <li onClick={() => window.scrollTo(0, 0)}>
+            <Link
+              to="partners"
+              className={pathname === "/partners" ? active : ""}
+            >
+              Partners
+            </Link>
+          </li> */}
         </ul>
 
         <ul className={isSticky ? "sticky" : ""}>
@@ -92,23 +92,7 @@ const Navbar = () => {
           </li>
           <li onClick={() => window.scrollTo(0, 0)}>
             <Link to="/" className={`hide ${pathname === "/" ? active : ""}`}>
-              Home
-            </Link>
-          </li>
-          <li onClick={() => window.scrollTo(0, 0)}>
-            <Link
-              to="about"
-              className={`hide ${pathname === "/about" ? active : ""}`}
-            >
-              About Us
-            </Link>
-          </li>
-          <li onClick={() => window.scrollTo(0, 0)}>
-            <Link
-              to="partners"
-              className={`hide ${pathname === "/partners" ? active : ""}`}
-            >
-              Partners
+              HOME
             </Link>
           </li>
           <li onClick={() => window.scrollTo(0, 0)}>
@@ -117,9 +101,26 @@ const Navbar = () => {
               id="last"
               className={`hide ${pathname === "/donation" ? active : ""}`}
             >
-              Donation
+              GIVE
             </Link>
           </li>
+          <li onClick={() => window.scrollTo(0, 0)}>
+            <Link
+              to="about"
+              className={`hide ${pathname === "/about" ? active : ""}`}
+            >
+              ABOUT US
+            </Link>
+          </li>
+          {/* <li onClick={() => window.scrollTo(0, 0)}>
+            <Link
+              to="partners"
+              className={`hide ${pathname === "/partners" ? active : ""}`}
+            >
+              Partners
+            </Link>
+          </li> */}
+
           <li onClick={showDisplay} style={{ opacity: opacity }} id="burger">
             <a href="#javascript:;">
               <svg
