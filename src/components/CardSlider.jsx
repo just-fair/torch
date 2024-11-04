@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import ATEANGEL from "../assets/imgs/leaders/ATEANGEL1.jpg";
 import ATEPHOEBE from "../assets/imgs/leaders/ATEPHOEBE.jpeg";
@@ -29,7 +29,7 @@ const CardSlider = () => {
     { src: LEE, name: "Hayle Greselle L. Base", role: "Junior Pastor" },
     { src: MISA, name: "Roshell Dian F. Subillaga", role: "Junior Pastor" },
     { src: KUYAPAUL, name: "Christian Paul Salvador", role: "Elder" },
-    { src: ATEPHOEBE, name: "Phoebe Kates Salvado", role: "Elder" },
+    { src: ATEPHOEBE, name: "Phoebe Kates Salvador", role: "Elder" },
     { src: TITALHEK, name: "Rosemarie Beltran", role: "Elder" },
     { src: TITASWEET, name: "Sweetheart B. Maga", role: "Elder" },
     { src: TITOLITO, name: "Angelito Maga", role: "Elder" },
@@ -45,19 +45,29 @@ const CardSlider = () => {
   ];
 
   const slideWidth = 250; // Adjust width to fit your card width
-  const totalWidth = slideWidth * cards.length;
+  const totalWidth = slideWidth * cards.length * 2; // Double the width for infinite loop
+
+  const [position, setPosition] = useState(0);
+
+  const handleNext = () => {
+    setPosition((prevPosition) => (prevPosition - slideWidth) % totalWidth);
+  };
+
+  const handlePrevious = () => {
+    setPosition((prevPosition) => (prevPosition + slideWidth) % totalWidth);
+  };
 
   return (
     <div id="card-area">
-      {/* <button className="slide-button" onClick={() => {}}>
+      <button className="slide-button" onClick={handlePrevious}>
         {"<"}
-      </button> */}
+      </button>
       <motion.div
         className="wrapper"
-        animate={{ x: [0, -totalWidth] }} // Moves left
+        animate={{ x: [position, position - totalWidth / 2] }} // Moves left in a loop
         transition={{
           repeat: Infinity,
-          duration: 250, // Slower speed for continuous scrolling
+          duration: 250, // Adjust duration for desired speed
           ease: "linear",
         }}
         style={{ display: "flex" }}
@@ -70,9 +80,9 @@ const CardSlider = () => {
           </div>
         ))}
       </motion.div>
-      {/* <button className="slide-button" onClick={() => {}}>
+      <button className="slide-button" onClick={handleNext}>
         {">"}
-      </button> */}
+      </button>
     </div>
   );
 };
