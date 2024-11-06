@@ -1,62 +1,84 @@
-#card-area {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-  }
+#slider-container {
+  margin-top: 10vh;
+  overflow: hidden;
+  max-width: 100%; 
+  padding: 0 30px;
   
-  .wrapper {
-    margin-top: 50px;
-    display: flex;
-    gap: 20px; /* Space between cards */
-    will-change: transform;
-  }
+}
+
+
+.box {
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  background: #000;
+  text-align: center;
+  padding: 10px;
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+h3, p {
+  margin: 5px 0;
+}
+
+
+
+.slide-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 24px;
+  z-index: 100;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.slide-button:first-of-type {
+  left: 10px;
+}
+
+.slide-button:last-of-type {
+  right: 10px;
+}
+
+/* .slick-prev, .slick-next {
+  font-size: 30px;
+  width: 30px; 
+  height: 30px;
+  z-index: 99;
+}
+
+.slick-prev{
+  margin-right: 10px;
+}
+
+.slick-next{
+  margin-left: 10px;
+} */
+
+
+
+@media (max-width: 768px) {
   
-  .box {
-    min-width: 400px; 
-    max-width: 400px;
-    flex-shrink: 0; /* Prevents cards from shrinking */
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-    /* background: #fff; */
-    background: #000;
-    text-align: center;
-    padding: 10px;
-    /* display: block; */
-  }
   
-  .box img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+  .slick-prev, .slick-next {
+    display: none;
   }
-  
+
   h3, p {
-    margin: 5px 0;
-    /* font-size: 16px; */
-    /* color: #333; */
+    margin: 10px 0;
+    font-size: 12px;
   }
+}
 
-
-  
-  .slide-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 24px;
-    z-index: 100;
-  }
-  
-  .slide-button:first-of-type {
-    left: 10px;
-  }
-  
-  .slide-button:last-of-type {
-    right: 10px;
-  }
-  
+   

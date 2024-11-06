@@ -37,11 +37,10 @@ function About() {
             </h3>
 
             <p>
-              That is the abbreviation for our Church’s name. TORCH is a
-              pioneering church founded in Bahay Toro, Quezon City, Metro Manila
-              in 2018, with the goal of evangelizing youth in various schools in
-              Proj 6 and 8 of Quezon City and encouraging them to join our
-              organization in serving God and society.
+              TORCH is a pioneering church founded in Bahay Toro, Quezon City,
+              Metro Manila in 2018, with the goal of evangelizing youth in
+              various schools in Proj 6 and 8 of Quezon City and encouraging
+              them to join our organization in serving God and society.
             </p>
           </motion.div>
         </div>

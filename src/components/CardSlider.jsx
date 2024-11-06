@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import ATEANGEL from "../assets/imgs/leaders/ATEANGEL1.jpg";
 import ATEPHOEBE from "../assets/imgs/leaders/ATEPHOEBE.jpeg";
 import COLLEEN from "../assets/imgs/leaders/COLLEEN.jpg";
@@ -16,6 +16,8 @@ import TITALHEK from "../assets/imgs/leaders/TITALHEK1.jpeg";
 import TITASWEET from "../assets/imgs/leaders/TITASWEET2.jpg";
 import TITOLITO from "../assets/imgs/leaders/TITOLITO2.jpg";
 import "../styles/cardslider.css";
+
+import Slider from "react-slick";
 
 const CardSlider = () => {
   const cards = [
@@ -44,45 +46,28 @@ const CardSlider = () => {
     },
   ];
 
-  const slideWidth = 250; // Adjust width to fit your card width
-  const totalWidth = slideWidth * cards.length * 2; // Double the width for infinite loop
-
-  const [position, setPosition] = useState(0);
-
-  const handleNext = () => {
-    setPosition((prevPosition) => (prevPosition - slideWidth) % totalWidth);
-  };
-
-  const handlePrevious = () => {
-    setPosition((prevPosition) => (prevPosition + slideWidth) % totalWidth);
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 2500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: false,
   };
 
   return (
-    <div id="card-area">
-      <button className="slide-button" onClick={handlePrevious}>
-        {"<"}
-      </button>
-      <motion.div
-        className="wrapper"
-        animate={{ x: [position, position - totalWidth / 2] }} // Moves left in a loop
-        transition={{
-          repeat: Infinity,
-          duration: 250, // Adjust duration for desired speed
-          ease: "linear",
-        }}
-        style={{ display: "flex" }}
-      >
-        {[...cards, ...cards].map((card, index) => (
-          <div className="box" key={index} style={{ width: slideWidth }}>
+    <div id="slider-container">
+      <Slider {...settings}>
+        {cards.map((card, index) => (
+          <div key={index} className="box">
             <img src={card.src} alt={card.name} />
             <h3>{card.name}</h3>
             <p>{card.role}</p>
           </div>
         ))}
-      </motion.div>
-      <button className="slide-button" onClick={handleNext}>
-        {">"}
-      </button>
+      </Slider>
     </div>
   );
 };

@@ -67,6 +67,11 @@ const Navbar = () => {
             </Link>
           </li>
           <li onClick={() => window.scrollTo(0, 0)}>
+            <Link to="merch" className={pathname === "/merch" ? active : ""}>
+              MERCH
+            </Link>
+          </li>
+          <li onClick={() => window.scrollTo(0, 0)}>
             <Link to="about" className={pathname === "/about" ? active : ""}>
               ABOUT US
             </Link>
@@ -102,6 +107,14 @@ const Navbar = () => {
               className={`hide ${pathname === "/donation" ? active : ""}`}
             >
               GIVE
+            </Link>
+          </li>
+          <li onClick={() => window.scrollTo(0, 0)}>
+            <Link
+              to="merch"
+              className={`hide ${pathname === "/merch" ? active : ""}`}
+            >
+              MERCH
             </Link>
           </li>
           <li onClick={() => window.scrollTo(0, 0)}>

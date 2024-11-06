@@ -1,0 +1,32 @@
+section.merchandise{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: linear-gradient(to right, #293462, #4b4576, #6b5789, #8c6a9b, #ac7ead); */
+}
+
+.merchandise h1{
+    text-align: center;
+    font-size: 4rem;
+    font-family: "play-fair";
+    color: #ac7ead
+}
+
+.merchandise h3{
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "play-fair";
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .merchandise h1{
+        font-size: 2.7rem;
+    }
+
+    .merchandise h3{
+        font-size: 1.2rem;
+    }
+}
+
