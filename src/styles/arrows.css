@@ -1,0 +1,51 @@
+.next-arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #bbb199;
+    color: black;
+    padding: 10px;
+    height: 150px;
+    width: 50px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.prev-arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #bbb199;
+    color: black;
+    padding: 10px;
+    height: 150px;
+    width: 50px;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    font-size: 30px;
+    font-weight: 900;
+}
+  
+  .custom-arrow:hover {
+    background: #b0a99a; 
+  }
+
+  @media (max-width: 600px) {
+    .custom-arrow {
+      height: 30px; 
+      width: 30px;   
+      font-size: 13px; 
+      border-radius: 50%;
+      top: calc(50% - 50px);
+    }
+  }

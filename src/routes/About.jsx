@@ -3,31 +3,29 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../animation/animations";
 import CardSlider from "../components/CardSlider";
+import TorchPicsSlider from "../components/TorchPicsSlider";
 
 function About() {
   return (
     <>
       <section className="about">
+        <div className="about-hero">
+          <TorchPicsSlider />
+        </div>
+
         <div className="about-container">
-          <motion.div
+          {/* <motion.div
             className="curvy-bg"
             initial={{ x: "-200vw", y: "-160vw", rotate: 0 }}
             animate={{ x: 0, rotate: 360 }}
             transition={{ duration: 2, ease: "easeInOut" }}
-          >
-            <motion.h1
-              className="torch"
-              variants={fadeIn("down", 2)}
-              initial="hidden"
-              animate="show"
-            >
-              TORCH
-            </motion.h1>
-          </motion.div>
+          > */}
+
+          {/* </motion.div> */}
 
           <motion.div
             className="txt-container"
-            variants={fadeIn("up", 3)}
+            variants={fadeIn("up", 1)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true, amount: 0.5 }}

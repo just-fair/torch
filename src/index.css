@@ -676,34 +676,45 @@ p {
   align-items: center;
 }
 
-.curvy-bg {
+/* .about-hero{
+  height: 100vh;
+  position: relative;
+} */
+/* 
+.torch {
+  color: white;
+  font-family: "monumento-extended";
+  font-weight: 700;
+  font-size: 5rem;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 0;
+  z-index: 100;
+} */
+
+
+/* .curvy-bg {
   width: 200vw;
   height: 200vw;
   background-color: black;
   border-radius: 50%;
   position: absolute;
   top: 0;
-  /* left: 50%;     */
   transform: translate(-50%, -80%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   overflow: hidden;
-}
+} */
 
-.torch {
-  color: white;
-  font-family: "monumento-extended";
-  font-weight: 700;
-  font-size: 5rem;
-  color: white;
-  text-align: center;
-  margin-bottom: 13rem;
-}
+
 
 .about h3 {
-  margin-top: 100vh;
+  margin-top: 100px;
   font-family: "play-fair ";
   text-align: center;
   margin-bottom: 4rem;
@@ -988,6 +999,11 @@ p {
   margin-right: 100px;
 }
 
+.qr img{
+  height: 300px;
+  width: 300px;
+}
+
 .qr h5 {
   font-size: 1.4rem;
   font-weight: 500;
@@ -1234,6 +1250,10 @@ p {
     height: 105vh;
   }
 
+  .about-hero{
+    margin-top: 5vh;
+  }
+
   .curvy-bg {
     transform: translate(-50%, -55%);
     padding-bottom: 5rem;
@@ -1257,7 +1277,7 @@ p {
 
   .about h3 {
     font-size: 1.4rem;
-    margin-top: 45vh;
+    /* margin-top: 45vh; */
     margin-bottom: 20px;
   }
 

@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import { fadeIn } from "../animation/animations";
+import QrCode from "../../src/assets/imgs/QrCode/qrcode22.png";
 
 function Donate() {
   return (
@@ -33,11 +34,8 @@ function Donate() {
           initial="hidden"
           animate="show"
         >
-          <img
-            src="https://imgs.search.brave.com/w2OM7cKMxss94amH6vatYpb_oARSIQr65V6P-dkF4a4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/dmVjdG9yc3RvY2su/Y29tL2kvcHJldmll/dy0xeC8xNC83OC9z/YW1wbGUtcXItY29k/ZS12ZWN0b3ItNzEx/NDc4LmpwZw"
-            alt=""
-          />
-          <h5>Scan the QR</h5>
+          <img src={QrCode} alt="QR Code" />
+          <h5>Scan the QR Code</h5>
         </motion.div>
       </section>
     </>

@@ -76,14 +76,14 @@ const Navbar = () => {
               ABOUT US
             </Link>
           </li>
-          {/* <li onClick={() => window.scrollTo(0, 0)}>
+          <li onClick={() => window.scrollTo(0, 0)}>
             <Link
-              to="partners"
-              className={pathname === "/partners" ? active : ""}
+              to="ministries"
+              className={pathname === "/ministries" ? active : ""}
             >
-              Partners
+              MINISTRIES
             </Link>
-          </li> */}
+          </li>
         </ul>
 
         <ul className={isSticky ? "sticky" : ""}>
@@ -125,14 +125,14 @@ const Navbar = () => {
               ABOUT US
             </Link>
           </li>
-          {/* <li onClick={() => window.scrollTo(0, 0)}>
+          <li onClick={() => window.scrollTo(0, 0)}>
             <Link
-              to="partners"
-              className={`hide ${pathname === "/partners" ? active : ""}`}
+              to="ministries"
+              className={`hide ${pathname === "/ministries" ? active : ""}`}
             >
-              Partners
+              MINISTRIES
             </Link>
-          </li> */}
+          </li>
 
           <li onClick={showDisplay} style={{ opacity: opacity }} id="burger">
             <a href="#javascript:;">

@@ -8,6 +8,7 @@ import Home from "./routes/Home.jsx";
 // import Partners from "./routes/Partners.jsx";
 import Merchandise from "./routes/Merchandise.jsx";
 import Donate from "./routes/Donate.jsx";
+import Ministries from "./routes/Ministries.jsx";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "donation",
         element: <Donate />,
+      },
+      {
+        path: "ministries",
+        element: <Ministries />,
       },
     ],
   },

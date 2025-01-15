@@ -1,0 +1,62 @@
+#torch-pics-container {
+    /* overflow: hidden; */
+    max-width: 100%; 
+    height: 100%;
+    /* padding: 0 30px; */
+    
+  }
+
+.picture-container {
+    position: relative;
+    width: 100%; 
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center; 
+  }
+
+  .torch {
+    color: white;
+    font-family: "monumento-extended";
+    font-weight: 700;
+    font-size: 5rem;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 0;
+    z-index: 100;
+}
+  
+  .picture-container img {
+    width: 100%; 
+    height: auto;
+    object-fit: cover; 
+  }
+
+/* 
+  #slider-container {
+    margin-top: 10vh;
+    overflow: hidden;
+    max-width: 100%; 
+    padding: 0 30px;
+    
+  }
+  
+  
+  .box {
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background: #000;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  } */
