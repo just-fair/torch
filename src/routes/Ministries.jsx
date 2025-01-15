@@ -12,7 +12,7 @@ import ROSHELL1 from "../assets/imgs/PAW/ROSHELL1.jpg";
 
 import MATINTRO from "../assets/imgs/MAT/mat-intro.JPG";
 import ANGEL2 from "../assets/imgs/MAT/ANGEL2.jpg";
-import COLLEEN2 from "../assets/imgs/MAT/COLLEEN2.JPG";
+import COLLEEN2 from "../assets/imgs/MAT/COLLEEN2.jpg";
 import USHERINGINTRO from "../assets/imgs/Ushering/una-ushering.JPG";
 import USHERINGVM from "../assets/imgs/Ushering/vm-ushering.JPG";
 import DANIELA2 from "../assets/imgs/Ushering/DANIELA2.jpg";
