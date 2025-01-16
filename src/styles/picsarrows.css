@@ -1,5 +1,5 @@
 .right-arrow{
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     background: #ac7ead;
@@ -18,7 +18,7 @@
 }
 
 .left-arrow{
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     background: #ac7ead;

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../animation/animations";
 import CardSlider from "../components/CardSlider";
 import TorchPicsSlider from "../components/TorchPicsSlider";
+import VMPIC from "../assets/imgs/vm.png";
 
 function About() {
   return (
@@ -75,7 +76,9 @@ function About() {
             </p>
           </motion.div>
 
-          <div className="mission-img"></div>
+          <div className="mission-img">
+            <img src={VMPIC} alt="" />
+          </div>
         </div>
 
         <div className="vision">
@@ -90,7 +93,9 @@ function About() {
             <p> Spread the Fire of Revival all around the globe.</p>
           </motion.div>
 
-          <div className="vision-img"></div>
+          <div className="vision-img">
+            <img src={VMPIC} alt="" />
+          </div>
         </div>
       </section>
 

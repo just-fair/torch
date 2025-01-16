@@ -36,6 +36,16 @@
     object-fit: cover; 
   }
 
+
+  .fade-slide {
+    opacity: 0;
+    transition: opacity 2s ease-in-out; /* Adjust the duration here */
+  }
+  
+  .slick-active .fade-slide {
+    opacity: 1;
+  }
+
 /* 
   #slider-container {
     margin-top: 10vh;

@@ -11,8 +11,8 @@ import JELOY2 from "../assets/imgs/PAW/JELOY2.jpg";
 import ROSHELL1 from "../assets/imgs/PAW/ROSHELL1.jpg";
 
 import MATINTRO from "../assets/imgs/MAT/mat-intro.JPG";
-import ANGEL2 from "../assets/imgs/MAT/ANGEL2.JPG";
-import COLLEEN2 from "../assets/imgs/MAT/COLLEEN2.JPG";
+import ANGEL2 from "../assets/imgs/MAT/ANGEL2.jpg";
+import COLLEEN2 from "../assets/imgs/MAT/COLLEEN2.jpg";
 import USHERINGINTRO from "../assets/imgs/Ushering/una-ushering.JPG";
 import USHERINGVM from "../assets/imgs/Ushering/vm-ushering.JPG";
 import DANIELA2 from "../assets/imgs/Ushering/DANIELA2.jpg";
@@ -29,50 +29,112 @@ import TINA2 from "../assets/imgs/PM/TINA2.jpg";
 import INTROLG from "../assets/imgs/LG/intro-lg.JPG";
 import VMLG from "../assets/imgs/LG/vm-lg.JPG";
 
+import { motion } from "framer-motion";
+import { fadeIn } from "../animation/animations";
+
 const Ministries = () => {
   return (
     <>
       <section className="ministries">
-        <h1>MINISTRIES</h1>
+        <motion.div
+          variants={fadeIn("up", 0.01)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true }}
+        >
+          <h1>MINISTRIES</h1>
+        </motion.div>
 
         <div className="part">
-          <img src={MATHERO} alt="media and technicals image" />
+          <motion.img
+            src={MATHERO}
+            alt="media and technicals image"
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
 
-          <div className="words">
+          <motion.div
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+            className="words"
+          >
             <h2>
               media and <br />
               technicals
             </h2>
-            <a href="#mat" class="material-button">
+            <a href="#mat" className="material-button">
               Click to see more
             </a>
-          </div>
+          </motion.div>
         </div>
 
         <div className="part vm">
-          <div className="words">
+          <motion.div
+            className="words"
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>TAMBOURINE</h2>
-            <a href="#tamb" class="material-button">
+            <a href="#tamb" className="material-button">
               Click to know more
             </a>
-          </div>
-          <img src={TAMBHERO} alt="tambourine image" />
+          </motion.div>
+          <motion.img
+            src={TAMBHERO}
+            alt="tambourine image"
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
         </div>
 
         <div className="part">
-          <img src={PAWHERO} alt="praise and worship image" />
-          <div className="words">
+          <motion.img
+            src={PAWHERO}
+            alt="praise and worship image"
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
+          <motion.div
+            className="words"
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>Praise and worship</h2>
-            <a href="#paw" class="material-button">
+            <a href="#paw" className="material-button">
               Click to know more
             </a>
-          </div>
+          </motion.div>
         </div>
 
         {/* Media and technicals */}
         <div className="part" id="mat">
-          <img src={MATINTRO} alt="Media and technicals intro" />
-          <div className="words">
+          <motion.img
+            src={MATINTRO}
+            alt="Media and technicals intro"
+            variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
+          <motion.div
+            className="words"
+            variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>MEDIA AND TECHNICALS MINISTRY</h2>
             <p>
               The Media Team is committed to enhancing worship and spreads God’s
@@ -86,11 +148,17 @@ const Ministries = () => {
               content creation. Together, the Media Team works in harmony to
               glorify God through media excellence.
             </p>
-          </div>
+          </motion.div>
         </div>
 
         <div className="part vm">
-          <div className="words vm">
+          <motion.div
+            className="words vm"
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>vission</h2>
             <p>
               “To be an effective channel connecting people to God and the
@@ -103,13 +171,33 @@ const Ministries = () => {
               to His people and to provide quality digital content that
               demonstrates the good works of God."
             </p>
-          </div>
-          <img src={MATHERO} alt="mission vission image" />
+          </motion.div>
+          <motion.img
+            src={MATHERO}
+            alt="mission vission image"
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
         </div>
 
         <div className="part meet">
-          <img src={ANGEL2} alt="ate angel image" />
-          <div className="words introduce">
+          <motion.img
+            src={ANGEL2}
+            alt="ate angel image"
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
+          <motion.div
+            className="words introduce"
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>Meet Ate Angel</h2>
             <p>
               Hi, I’m Ate Angel, a passionate young woman with a heart for
@@ -121,11 +209,17 @@ const Ministries = () => {
               embraced her calling to serve and inspire others in innovative and
               meaningful ways.
             </p>
-          </div>
+          </motion.div>
         </div>
 
         <div className="part meet vm">
-          <div className="words introduce">
+          <motion.div
+            className="words introduce"
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>Meet Ate Colleen</h2>
             <p>
               Hi, I’m Ate Colleen, head of the Photography Department in
@@ -134,25 +228,51 @@ const Ministries = () => {
               skills, and make great friends along the way. Interested? Come
               find me—I’d love to chat with you about joining!
             </p>
-          </div>
-          <img src={COLLEEN2} alt="ate colleen image" />
+          </motion.div>
+          <motion.img
+            src={COLLEEN2}
+            alt="ate colleen image"
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
         </div>
 
-        <div className="join">
+        <motion.div
+          className="join"
+          variants={fadeIn("up", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.7 }}
+        >
           <h2>Interested in Media? Join Us!</h2>
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSd6vkw2iitLtOUp8EKhBjdLFSwd0_bF5kfvR8ro9h9-Uql2RQ/viewform?usp=sharing"
             target="_blank"
-            class="material-button submit"
+            className="material-button submit"
           >
             Media Form
           </a>
-        </div>
+        </motion.div>
 
         {/* Ushering ministry */}
         <div className="part">
-          <img src={USHERINGINTRO} alt="Ushering ministry image" />
-          <div className="words">
+          <motion.img
+            src={USHERINGINTRO}
+            alt="Ushering ministry image"
+            variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
+          <motion.div
+            className="words"
+            variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>USHERING MINISTRY</h2>
             <p>
               We're the ushers, the welcoming team that prepares the church for
@@ -164,11 +284,17 @@ const Ministries = () => {
               looking for a way to serve and connect with our church community,
               join our ushering team!
             </p>
-          </div>
+          </motion.div>
         </div>
 
         <div className="part vm">
-          <div className="words vm">
+          <motion.div
+            className="words vm"
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>vission</h2>
             <p>
               To be the vessel of God's presence in welcoming souls to His
@@ -180,13 +306,33 @@ const Ministries = () => {
               imparting the presence of God through our love for God,
               dedication, unity, and God service-centered.
             </p>
-          </div>
-          <img src={USHERINGVM} alt="mission vission image" />
+          </motion.div>
+          <motion.img
+            src={USHERINGVM}
+            alt="mission vission image"
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
         </div>
 
         <div className="part meet">
-          <img src={DANIELA2} alt="ate Daniela image" />
-          <div className="words introduce">
+          <motion.img
+            src={DANIELA2}
+            alt="ate Daniela image"
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
+          <motion.div
+            className="words introduce"
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>Meet Ate Daniela</h2>
             <p>
               Hi, I’m Ate Daniela, the ministry head of ushering. Want to be
@@ -197,25 +343,44 @@ const Ministries = () => {
               joining, just come find me – I'm super friendly and happy to
               answer any questions. Let's make our church even better together!
             </p>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="join">
+        <motion.div
+          className="join"
+          variants={fadeIn("up", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.7 }}
+        >
           <h2>Interested in Ushering? Contact Us!</h2>
           <a
             href="https://www.facebook.com/dnyela.aaa"
-            class="material-button submit"
+            className="material-button submit"
             target="_blank"
           >
             <i className="ri-facebook-box-fill"></i>
             dnyela.aaa
           </a>
-        </div>
+        </motion.div>
 
         {/* Tambourine ministry */}
         <div className="part" id="tamb">
-          <img src={TAMBINTRO} alt="Tambourine ministry image" />
-          <div className="words">
+          <motion.img
+            src={TAMBINTRO}
+            alt="Tambourine ministry image"
+            variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
+          <motion.div
+            className="words"
+            variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>TAMBOURINE MINISTRY</h2>
             <p>
               Tambourine and Flag Ministry is a prophetic ministry inspired by
@@ -224,11 +389,17 @@ const Ministries = () => {
               powerful prophetic flag dancing, we proclaim triumph in every
               battle and the abundant grace of God.
             </p>
-          </div>
+          </motion.div>
         </div>
 
         <div className="part vm">
-          <div className="words vm">
+          <motion.div
+            className="words vm"
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>vission</h2>
             <p>“To dance zealously led by the Holy Spirit.”</p>
             <h2>mission</h2>
@@ -236,37 +407,77 @@ const Ministries = () => {
               "To lead everyone in proclamation of his victory through dance and
               tambourine."
             </p>
-          </div>
-          <img src={TAMBHERO} alt="mission vission image" />
+          </motion.div>
+
+          <motion.img
+            src={TAMBHERO}
+            alt="mission vission image"
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
         </div>
 
         <div className="part meet">
-          <img src={HAYLE2} alt="ate Daniela image" />
-          <div className="words introduce">
+          <motion.img
+            src={HAYLE2}
+            alt="ate Daniela image"
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
+          <motion.div
+            className="words introduce"
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>Meet Ate Lee</h2>
             <p>
               Every daughter of the Lord is invited to join us in serving His
               Kingdom! Meet Ate Hayle to become part of our growing ministry and
               declare God’s victory and blessings through dance.
             </p>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="join">
+        <motion.div
+          className="join"
+          variants={fadeIn("up", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.7 }}
+        >
           <h2>Interested in Tambourine? Join Us!</h2>
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSdulNv5n_86UIo4lN8UHG2cJoRyn9L7OmUJ9ETnxKIjTIAjQQ/viewform?usp=sharing"
-            class="material-button submit"
+            className="material-button submit"
             target="_blank"
           >
             Tambourine Form
           </a>
-        </div>
+        </motion.div>
 
         {/* Praise and worship */}
         <div className="part" id="paw">
-          <img src={PAWINTRO} alt="PAW intro" />
-          <div className="words">
+          <motion.img
+            src={PAWINTRO}
+            alt="PAW intro"
+            variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
+          <motion.div
+            className="words"
+            variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>PRAISE AND WORSHIP</h2>
             <p>
               We are a group of people devoted to using our musical talents for
@@ -278,11 +489,17 @@ const Ministries = () => {
               given talents, as we believe that we are given this privilege to
               serve. Welcome to the Praise and Worship Ministry!
             </p>
-          </div>
+          </motion.div>
         </div>
 
         <div className="part vm">
-          <div className="words vm">
+          <motion.div
+            className="words vm"
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>vission</h2>
             <p>
               “To be an effective channel connecting people to God and the
@@ -295,13 +512,33 @@ const Ministries = () => {
               to His people and to provide quality digital content that
               demonstrates the good works of God."
             </p>
-          </div>
-          <img src={PAWHERO} alt="mission vission image" />
+          </motion.div>
+          <motion.img
+            src={PAWHERO}
+            alt="mission vission image"
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
         </div>
 
         <div className="part meet">
-          <img src={JELOY2} alt="kuya Jeloy image" />
-          <div className="words introduce">
+          <motion.img
+            src={JELOY2}
+            alt="kuya Jeloy image"
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
+          <motion.div
+            className="words introduce"
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>Meet Kuya Geloy</h2>
             <p>
               Do you find joy in playing instruments? Hi! I’m Kuya Geloy, the
@@ -311,11 +548,17 @@ const Ministries = () => {
               deepen our faith, embrace our God-given calling, and raise His
               name through praise and worship. Are you ready?
             </p>
-          </div>
+          </motion.div>
         </div>
 
         <div className="part meet vm">
-          <div className="words introduce">
+          <motion.div
+            className="words introduce"
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>Meet Ate Dian</h2>
             <p>
               Hey there! I’m Ate Dian, the ministry head of the vocals team at
@@ -326,25 +569,52 @@ const Ministries = () => {
               chitchat and get to know each other—can't wait to welcome you to
               our family!
             </p>
-          </div>
-          <img src={ROSHELL1} alt="ate roshell image" />
+          </motion.div>
+
+          <motion.img
+            src={ROSHELL1}
+            alt="ate roshell image"
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
         </div>
 
-        <div className="join">
+        <motion.div
+          className="join"
+          variants={fadeIn("up", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.7 }}
+        >
           <h2>Interested in PAW? Join Us!</h2>
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSdasBonrQ1mAeZwTNxP7kQMp7YcpZ7a5Mk0c2theQdbmipz7A/viewform?usp=header"
-            class="material-button submit"
+            className="material-button submit"
             target="_blank"
           >
             PAW Form
           </a>
-        </div>
+        </motion.div>
 
         {/* Light Group */}
         <div className="part">
-          <img src={INTROLG} alt="LG intro" />
-          <div className="words">
+          <motion.img
+            src={INTROLG}
+            alt="LG intro"
+            variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
+          <motion.div
+            className="words"
+            variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>LIGHT GROUP</h2>
             <p>
               Light Group is an engaging ministry designed to foster spiritual
@@ -356,24 +626,51 @@ const Ministries = () => {
               Join us and experience a journey of spiritual transformation. Let
               us walk in faith and be a light to those around us!
             </p>
-          </div>
+          </motion.div>
         </div>
 
         <div className="part vm ">
-          <div className="words vm">
+          <motion.div
+            className="words vm"
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>vission</h2>
             <p>
               Seeing Every Disciple Bearing the Light of God's Revival Fire.
             </p>
             <h2>mission</h2>
             <p>Share — Consolidate — Equip — Send.</p>
-          </div>
-          <img src={VMLG} alt="mission vission image" />
+          </motion.div>
+
+          <motion.img
+            src={VMLG}
+            alt="mission vission image"
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
         </div>
 
         <div className="part meet">
-          <img src={TINA1} alt="Tina image" />
-          <div className="words introduce">
+          <motion.img
+            src={TINA1}
+            alt="Tina image"
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
+          <motion.div
+            className="words introduce"
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>Meet Ptra. Tina</h2>
             <p>
               Meet Pastora Tina, a dedicated leader in our Light Group Ministry!
@@ -381,11 +678,17 @@ const Ministries = () => {
               lasting connections through heartfelt Bible studies, prayer, and
               fellowship. Join us and let’s walk in faith together!
             </p>
-          </div>
+          </motion.div>
         </div>
 
         <div className="part meet vm">
-          <div className="words introduce">
+          <motion.div
+            className="words introduce"
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>Meet Ptr. Louie</h2>
             <p>
               Meet Pastor Louie, the leader of our Light Group Ministry! He
@@ -393,16 +696,29 @@ const Ministries = () => {
               connection through Bible studies, prayer, and fellowship. Join us
               and experience a journey of faith and transformation!
             </p>
-          </div>
-          <img src={LOUIE1} alt="Louie image" />
+          </motion.div>
+          <motion.img
+            src={LOUIE1}
+            alt="Louie image"
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
         </div>
 
-        <div className="join light-group-contact">
+        <motion.div
+          className="join light-group-contact"
+          variants={fadeIn("up", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.7 }}
+        >
           <h2>INTERESTED IN JOINING US? CONTACT US!</h2>
 
           <a
             href="https://www.facebook.com/kristinacassandra.ardiente"
-            class="material-button submit"
+            className="material-button submit"
             target="_blank"
           >
             <i className="ri-facebook-box-fill"></i>
@@ -410,18 +726,31 @@ const Ministries = () => {
           </a>
           <a
             href="https://www.facebook.com/louie.castro.5055"
-            class="material-button submit"
+            className="material-button submit"
             target="_blank"
           >
             <i className="ri-facebook-box-fill"></i>
             louie.castro.5055
           </a>
-        </div>
+        </motion.div>
 
         {/* Pastoral Ministry */}
         <div className="part">
-          <img src={PMINTRO} alt="PM intro" />
-          <div className="words">
+          <motion.img
+            src={PMINTRO}
+            alt="PM intro"
+            variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
+          <motion.div
+            className="words"
+            variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>PASTORAL MINISTRY</h2>
             <p>
               Pastoral Ministry helps people grow spiritually, caring for the
@@ -430,11 +759,17 @@ const Ministries = () => {
               a welcoming, supportive environment where individuals can connect
               with God and each other.
             </p>
-          </div>
+          </motion.div>
         </div>
 
         <div className="part vm">
-          <div className="words vm">
+          <motion.div
+            className="words vm"
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>vission</h2>
             <p>To Shepherd the people of God to seek Christ and His Kingdom</p>
             <h2>mission</h2>
@@ -442,47 +777,95 @@ const Ministries = () => {
               We will take care of God’s flock by Feeding and Tending its Sheep
               and Lambs just as Christ does it.
             </p>
-          </div>
-          <img src={PMVM} alt="mission vission image" />
+          </motion.div>
+          <motion.img
+            src={PMVM}
+            alt="mission vission image"
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
         </div>
 
         <div className="part meet">
-          <img src={PVEN1} alt="Pven image" />
-          <div className="words introduce">
+          <motion.img
+            src={PVEN1}
+            alt="Pven image"
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          />
+          <motion.div
+            className="words introduce"
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <h2>Meet Ptr. Ven</h2>
             <p>
               Meet our lead pastor, Ptr. Ven. He leads our worship services,
               preaches sermons, and teaches Bible lessons to help individuals
               grow in their faith.
             </p>
-          </div>
+          </motion.div>
         </div>
 
         <div className="part vm">
-          <div className="words two-image">
+          <motion.div
+            className="words two-image"
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <p>
               Meet our associate pastors, Ptra. Tina and Ptr. Louie. They
               support our lead pastor in overall ministry, they help to counsel
               and provide pastoral care to church members.
             </p>
-          </div>
-          <div class="overlapping-image-container">
-            <img src={LOUIE2} alt="Louie image" class="image image-back" />
-            <img src={TINA2} alt="Tina image" class="image image-front" />
-          </div>
+          </motion.div>
+          <motion.div
+            className="overlapping-image-container"
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
+            <img src={LOUIE2} alt="Louie image" className="image image-back" />
+            <img src={TINA2} alt="Tina image" className="image image-front" />
+          </motion.div>
         </div>
 
         <div className="part">
-          <div class="overlapping-image-container last-part">
-            <img src={HAYLE2} alt="Hayle image" class="image image-back" />
-            <img src={ROSHELL1} alt="Roshell image" class="image image-front" />
-          </div>
-          <div className="words two-image">
+          <motion.div
+            className="overlapping-image-container last-part"
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
+            <img src={HAYLE2} alt="Hayle image" className="image image-back" />
+            <img
+              src={ROSHELL1}
+              alt="Roshell image"
+              className="image image-front"
+            />
+          </motion.div>
+          <motion.div
+            className="words two-image"
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+          >
             <p>
               Meet our pastoral trainees, Sis. Roshell and Sis. Hayle. They also
               offer prayers and support during both joyful and difficult times.
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
     </>

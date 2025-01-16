@@ -19,10 +19,14 @@ export default function SimpleSlider() {
     dots: true,
     infinite: true,
     fade: true,
-    speed: 500,
+    // speed: 2000,
+    autoplay: true,
+    autoplaySpeed: 4000,
     swipeToSlide: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    cssEase: "linear",
+    waitForAnimate: true,
     prevArrow: <LeftArrow />,
     nextArrow: <RightArrow />,
   };
@@ -32,7 +36,7 @@ export default function SimpleSlider() {
       <Slider {...settings}>
         {images.map((image, index) => (
           <div className="picture-container" key={index}>
-            <img src={image} alt="Torch Pics" />
+            <img src={image} alt="Torch Pics" className="fade-slide" />
             <h1 className="torch">TORCH</h1>
           </div>
         ))}

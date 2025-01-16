@@ -16,14 +16,13 @@ function Donate() {
           animate="show"
         >
           <div>
-            <h1>Give</h1>
+            <h1>Proverbs 3:9-10</h1>
           </div>
           <div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-              repellendus neque suscipit repellat odit! Hic rem magni doloribus
-              voluptatum, magnam minima quis aliquam, quo iure temporibus amet
-              aperiam facilis ut!
+              "Honor the Lord from your wealth, And from the first of all your
+              produce; Then your barns will be filled with plenty, And your vats
+              will overflow with new wine."
             </p>
           </div>
         </motion.div>
