@@ -27,6 +27,7 @@ export default function SimpleSlider() {
     slidesToScroll: 1,
     cssEase: "linear",
     waitForAnimate: true,
+    pauseOnHover: false,
     prevArrow: <LeftArrow />,
     nextArrow: <RightArrow />,
   };
